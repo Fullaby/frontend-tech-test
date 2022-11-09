@@ -5,7 +5,7 @@ export const useCustomStore = defineStore({
   id: "Custom",
   
   state: ()=>({
-    baseUrl: "https://tech-testss-server.herokuapp.com",
+    baseUrl: "https://tech-test-backend.herokuapp.com",
     errorMessage: "",
     diagramDataMonth: "",
     diagramDataValue: ""
