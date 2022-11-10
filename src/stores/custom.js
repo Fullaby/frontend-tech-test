@@ -8,7 +8,8 @@ export const useCustomStore = defineStore({
     baseUrl: "https://tech-test-backend.herokuapp.com",
     errorMessage: "",
     diagramDataMonth: "",
-    diagramDataValue: ""
+    diagramDataValue: "",
+    registerErrorMessage: ""
   }),
   actions: {
     async login(value){
@@ -39,7 +40,7 @@ export const useCustomStore = defineStore({
             })
             this.router.push('/sign-in')
         } catch (error) {
-            console.log(error);
+          this.registerErrorMessage= error.response.data.message
         }
     },
     async fetchDiagramData(){
